@@ -1,0 +1,22 @@
+[project]
+name = "soc-telemetry-detective"
+version = "1.0.0"
+description = "A small SOC triage pipeline: detect, correlate and report on security events."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Sajay Chandran" }]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.5"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 79
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP"]
